@@ -146,7 +146,7 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        layer_5 {
+        layer_3 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
@@ -155,7 +155,7 @@
             >;
         };
 
-        layer_6 {
+        layer_4 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
