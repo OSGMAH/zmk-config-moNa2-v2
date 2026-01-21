@@ -9,45 +9,30 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 #define MOUSE 5
 #define SCROLL 6
-#define JP_ZKHK  GRAVE        // Zenkaku ↔ Hankaku ↔ Kanji (半角 ↔ 全角 ↔ 漢字)
-#define JP_MINUS MINUS        // -
-#define JP_CARET EQUAL        // ^
-#define JP_YEN   INT3         // ¥
-#define JP_AT    LBKT         // @
-#define JP_LBKT  RBKT         // [
-#define JP_EISU  CAPS         // Eisū (英数)
-#define JP_SEMI  SEMI         // ;
-#define JP_COLON SQT          // :
-#define JP_RBKT  NUHS         // ]
-#define JP_COMMA COMMA        // ,
-#define JP_DOT   DOT          // .
-#define JP_SLASH SLASH        // /
-#define JP_BSLH  INT1         // (backslash)
-#define JP_MHEN  INT5         // Muhenkan (無変換)
-#define JP_HENK  INT4         // Henkan (変換)
-#define JP_KANA  INT2         // Katakana ↔ Hiragana ↔ Rōmaji (カタカナ ↔ ひらがな ↔ ローマ字)
-#define JP_EXCL  LS(N1)       // !
-#define JP_DQT   LS(N2)       // "
-#define JP_HASH  LS(N3)       // #
-#define JP_DLLR  LS(N4)       // $
-#define JP_PRCNT LS(N5)       // %
-#define JP_AMPS  LS(N6)       // &
-#define JP_SQT   LS(N7)       // '
-#define JP_LPAR  LS(N8)       // (
-#define JP_RPAR  LS(N9)       // )
-#define JP_EQUAL LS(JP_MINUS) // =
-#define JP_TILDE LS(JP_CARET) // ~
-#define JP_PIPE  LS(JP_YEN)   // |
-#define JP_GRAVE LS(JP_AT)    // `
-#define JP_LBRC  LS(JP_LBKT)  // {
-#define JP_CAPS  LS(JP_EISU)  // Caps Lock
-#define JP_PLUS  LS(JP_SEMI)  // +
-#define JP_ASTRK LS(JP_COLON) // *
-#define JP_RBRC  LS(JP_RBKT)  // }
-#define JP_LT    LS(JP_COMMA) // <
-#define JP_RT    LS(JP_DOT)   // >
-#define JP_QMARK LS(JP_SLASH) // ?
-#define JP_UNDER LS(JP_BSLH)  // _
+#define JP_DQUOTE       AT                // "
+#define JP_AMPERSAND    CARET             // &
+#define JP_QUOTE        AMPERSAND         // '
+#define JP_EQUAL        UNDER             // =
+#define JP_CARET        EQUAL             // ^
+#define JP_YEN          0x89              // ¥
+#define JP_PLUS         COLON             // +
+#define JP_TILDE        PLUS              // ~
+#define JP_PIPE         LS(0x89)          // |
+#define JP_AT           LEFT_BRACKET      // @
+#define JP_COLON        SINGLE_QUOTE      // :
+#define JP_ASTERISK     DOUBLE_QUOTES     // *
+#define JP_BACKQUOTE    LEFT_BRACE        // `
+#define JP_UNDERSCORE   LS(0x87)          // _
+#define JP_LBRACKET     RIGHT_BRACKET     // [
+#define JP_RBRACKET     BACKSLASH         // ]
+#define JP_LPAREN       ASTERISK          // (
+#define JP_RPAREN       LEFT_PARENTHESIS  // )
+#define JP_LBRACE       RIGHT_BRACE       // {
+#define JP_RBRACE       PIPE              // }
+#define JP_KANA         LANGUAGE_1        // かな
+#define JP_EISU         LANGUAGE_2        // 英数
+#define JP_HANZEN       GRAVE             // 半角/全角
+#define JP_BSLH         INT1              // (backslash)
 
 &mt {
     flavor = "balanced";
@@ -85,7 +70,7 @@
 
         Right {
             bindings = <&kp RIGHT>;
-            key-positions = <18 19>;
+            key-positions = <17 18>;
         };
 
         Down {
@@ -151,10 +136,10 @@
 
         layer_1 {
             bindings = <
-&kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                             &kp JP_LPAR  &kp JP_RPAR   &kp JP_MINUS  &kp JP_CARET  &kp JP_YEN
-&kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0               &none         &none        &none         &none         &kp JP_AT     &kp JP_LBKT
-&kp LEFT_SHIFT  &none         &none         &none         &none         &none        &kp JP_COMMA  &kp JP_DOT   &kp JP_SLASH  &kp JP_SEMI   &kp JP_COLON  &kp JP_RBKT
-&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &none         &none         &kp SPACE    &kp SPACE     &none                                                  &kp BACKSPACE
+&kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                             &kp JP_LPAREN  &kp JP_RPAREN   &kp MINUS     &kp JP_CARET  &kp JP_YEN
+&kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0               &none         &none          &none           &none         &kp JP_AT     &kp JP_LBRACKET
+&kp LEFT_SHIFT  &none         &none         &none         &none         &none        &none         &none          &kp SLASH       &kp SEMI      &kp JP_COLON  &kp JP_RBRACKET
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &none         &none         &kp SPACE    &kp SPACE     &none                                                      &kp BACKSPACE
             >;
 
             sensor-bindings = <&scroll_right_left>;
@@ -162,31 +147,13 @@
 
         layer_2 {
             bindings = <
-&kp JP_EXCL  &kp JP_DQT  &kp JP_HASH  &kp JP_DLLR  &kp JP_PRCNT                          &kp JP_AMPS  &kp JP_SQT    &kp JP_EQUAL  &kp JP_TILDE  &kp JP_PIPE
-&kp F1       &kp F2      &kp F3       &kp F4       &kp F5                     &none      &none        &none         &none         &kp JP_GRAVE  &kp JP_LBRC
-&kp F6       &kp F7      &kp F8       &kp F9       &kp F10       &none        &kp JP_LT  &kp JP_RT    &kp JP_QMARK  &kp JP_PLUS   &kp JP_ASTRK  &kp JP_RBRC
-&kp F11      &kp F12     &none        &none        &none         &kp SPACE    &kp SPACE  &none                                                  &kp JP_UNDER
+&kp EXCL     &kp JP_DQUOTE  &kp HASH  &kp DLLR  &kp PRCNT                          &kp JP_AMPERSAND  &kp JP_QUOTE    &kp JP_EQUAL  &kp JP_TILDE  &kp JP_PIPE
+&kp F1       &kp F2      &kp F3       &kp F4       &kp F5                     &none      &none        &none         &none         &kp JP_BACKQUOTE  &kp JP_LBRACKET
+&kp F6       &kp F7      &kp F8       &kp F9       &kp F10       &none        &kp LT  &kp RT    &kp QMARK  &kp JP_PLUS   &kp JP_ASTERISK  &kp JP_RBRACKET
+&kp F11      &kp F12     &none        &none        &none         &kp SPACE    &kp SPACE  &none                                                  &kp JP_UNDERSCORE
             >;
 
             sensor-bindings = <&scroll_up_down>;
-        };
-
-        layer_ {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
-            >;
         };
 
         MOUSE {
