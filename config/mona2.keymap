@@ -261,7 +261,7 @@
 
         layer_1 {
             bindings = <
-&kp NUMBER_1    &kp mo2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                          &mo6  &mo7  &mo8  &mo9  &mo0
+&kp NUMBER_1    &mo2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                          &mo6  &mo7  &mo8  &mo9  &mo0
 &none           &none         &none         &none         &none         &none        &none      &none          &none          &kp UP_ARROW       &none
 &kp LEFT_SHIFT  &none         &none         &none         &none         &none        &none      &none          &none      &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW
 &kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE         &kp JP_EISU         &kp SPACE    &kp SPACE  &kp JP_KANA                                                  &kp BACKSPACE
