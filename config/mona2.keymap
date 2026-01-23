@@ -80,14 +80,13 @@
 
         Layer_6 {
             bindings = <&mo 6>;
-            key-positions = <38 41>;
-        };        
+            key-positions = <37 40>;
+        };
 
         PrtScr {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <0 9>;
         };
-
     };
 
     macros {
@@ -129,6 +128,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_2>, <&kp AT>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -136,6 +136,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_6>, <&kp CARET>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -143,6 +144,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_7>, <&kp AMPERSAND>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -150,6 +152,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_8>, <&kp ASTERISK>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -157,6 +160,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_9>, <&kp LEFT_PARENTHESIS>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -164,6 +168,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_0>, <&kp LS(NUMBER_9)>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -171,6 +176,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp UNDERSCORE>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -178,6 +184,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&kp PLUS>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -185,6 +192,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp INT3>, <&kp JP_PIPE>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -192,6 +200,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp LEFT_BRACE>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -199,6 +208,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RIGHT_BRACKET>, <&kp RIGHT_BRACE>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -206,6 +216,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SEMICOLON>, <&kp JP_PLUS>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -213,6 +224,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp APOSTROPHE>, <&kp DOUBLE_QUOTES>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -220,6 +232,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BACKSLASH>, <&kp TILDE>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -228,7 +241,6 @@
         compatible = "zmk,keymap";
 
         default_layer {
-
             // -----------------------------------------------------------------------------------
             // |  Q  |  W  |  E  |  R  |  T  |                      |  Y  |  U  |  I  |  O  |  P  |
             // |  A  |  S  |  D  |  F  |  G  |              　| ,/< |  H  |  J  |  K  |  L  | ENT |
@@ -236,17 +248,16 @@
             // | CTRL| WIN | ALT | DEL | 英数 |SPACE|          |SPACE| かな |      　　　　    | BKS |
 
             bindings = <
-&kp Q             &kp W         &kp E         &kp R       &kp T                                   &kp Y          &kp U  &kp I     &kp O     &kp P
-&kp A             &kp S         &kp D         &kp F       &kp G                       &kp COMMA   &kp H          &kp J  &kp K     &kp L     &kp ENTER
-&kp LEFT_SHIFT    &kp Z         &kp X         &kp C       &kp V          &kp B        &kp PERIOD  &kp N          &kp M  &mkp MB1  &mkp MB2  &kp RIGHT_SHIFT
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &lt 2 JP_EISU  &kp SPACE    &kp SPACE   &lt 1 JP_KANA                             &kp BACKSPACE
+&kp Q           &kp W         &kp E         &kp R       &kp T                                   &kp Y          &kp U  &kp I     &kp O     &kp P
+&kp A           &kp S         &kp D         &kp F       &kp G                       &kp COMMA   &kp H          &kp J  &kp K     &kp L     &kp ENTER
+&kp LEFT_SHIFT  &kp Z         &kp X         &kp C       &kp V          &kp B        &kp PERIOD  &kp N          &kp M  &mkp MB1  &mkp MB2  &kp RIGHT_SHIFT
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &lt 2 JP_EISU  &kp SPACE    &kp SPACE   &lt 1 JP_KANA                             &kp BACKSPACE
             >;
 
             sensor-bindings = <&scroll_up_down>;
         };
 
         layer_1 {
-
             // -----------------------------------------------------------------------------------
             // | 1/! | 2/" | 3/# | 4/$ | 5/% |                      | 6/& | 7/' | 8/( | 9/) |  0  |
             // | non | non | non | non | non |              　| non | non | non | non |  ↑  | non |
@@ -254,17 +265,16 @@
             // | CTRL| WIN | ALT | DEL | 英数 |SPACE|          |SPACE| かな |      　　　　    |  _  |
 
             bindings = <
-&kp NUMBER_1    &mo2          &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                          &mo6         &mo7      &mo8            &mo9            &mo0
-&none           &none         &none         &none         &none                      &none      &none        &none     &none           &kp UP_ARROW    &none
-&kp LEFT_SHIFT  &none         &none         &none         &none         &none        &none      &none        &none     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE    &kp JP_EISU   &kp SPACE    &kp SPACE  &kp JP_KANA                                            &kp JP_UNDERSCORE
+&kp NUMBER_1    &mo2          &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                          &mo6         &mo7   &mo8            &mo9            &mo0
+&none           &none         &none         &none         &none                      &none      &none        &none  &none           &kp UP_ARROW    &none
+&kp LEFT_SHIFT  &none         &none         &none         &none         &none        &none      &none        &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE    &kp JP_EISU   &kp SPACE    &kp SPACE  &kp JP_KANA                                         &kp JP_UNDERSCORE
             >;
 
             sensor-bindings = <&scroll_right_left>;
         };
 
         layer_2 {
-
             // -----------------------------------------------------------------------------------
             // | F1  | F2  | F3  | F4  | F5  |                      | non | non | -/= | ^/~ | ¥/| |
             // | F6  | F7  | F8  | F9  | F10 |              　| non | non | non | non | @/` | [/{ |
@@ -272,10 +282,10 @@
             // | CTRL| WIN | ALT | DEL | 英数 |SPACE|          |SPACE| かな |      　　　　    |  _  |
 
             bindings = <
-&kp F1           &kp F2         &kp F3        &kp F4      &kp F5                               &none        &none  &moA   &moB  &moC
-&kp F6           &kp F7         &kp F8        &kp F9      &kp F10                   &none      &none        &none  &none  &moD  &moE
-&kp LEFT_SHIFT   &none          &none         &none       &kp F11      &kp F12      &none      &none        &none  &moF   &moG  &moH
-&kp LCTRL        &kp LEFT_WIN   &kp LEFT_ALT  &kp DELETE  &kp JP_EISU  &kp SPACE    &kp SPACE  &kp JP_KANA                      &kp JP_UNDERSCORE
+&kp F1          &kp F2        &kp F3        &kp F4      &kp F5                               &none        &none  &moA   &moB  &moC
+&kp F6          &kp F7        &kp F8        &kp F9      &kp F10                   &none      &none        &none  &none  &moD  &moE
+&kp LEFT_SHIFT  &none         &none         &none       &kp F11      &kp F12      &none      &none        &none  &moF   &moG  &moH
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &kp JP_EISU  &kp SPACE    &kp SPACE  &kp JP_KANA                      &kp JP_UNDERSCORE
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -312,10 +322,10 @@
 
         SCROLL {
             bindings = <
-&none            &sys_reset    &none         &none           &none                                &none       &none    &none  &bt BT_SEL 3  &bt BT_SEL 0
-&none            &none         &none         &none           &none                     &none      &none       &none    &none  &bt BT_SEL 4  &bt BT_SEL 1
-&kp LEFT_SHIFT   &none         &none         &none           &none        &none        &none      &none       &none    &none  &none         &bt BT_SEL 2
-&kp LCTRL        &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE      &kp JP_EISU  &kp SPACE    &kp SPACE  &kp JP_KANA                               &bt BT_CLR_ALL
+&none           &sys_reset    &none         &none       &none                                &none        &none  &none  &bt BT_SEL 3  &bt BT_SEL 0
+&none           &none         &none         &none       &none                     &none      &none        &none  &none  &bt BT_SEL 4  &bt BT_SEL 1
+&kp LEFT_SHIFT  &none         &none         &none       &none        &none        &none      &none        &none  &none  &none         &bt BT_SEL 2
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &kp JP_EISU  &kp SPACE    &kp SPACE  &kp JP_KANA                              &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&scroll_right_left>;
