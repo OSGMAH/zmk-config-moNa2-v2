@@ -80,7 +80,7 @@
 
         Layer_6 {
             bindings = <&mo 6>;
-            key-positions = <37 40>;
+            key-positions = <0 1>;
         };
 
         PrtScr {
@@ -244,14 +244,14 @@
             // -----------------------------------------------------------------------------------
             // |  Q  |  W  |  E  |  R  |  T  |                      |  Y  |  U  |  I  |  O  |  P  |
             // |  A  |  S  |  D  |  F  |  G  |              　| ,/< |  H  |  J  |  K  |  L  | ENT |
-            // |SHIFT|  Z  |  X  |  C  |  V  |  B  |          | ./> |  N  |  M  | MB1 | MB2 |SHIFT|
+            // |SHIFT|  Z  |  X  |  C  |  V  |  B  |          | ./> |  N  |  M  | //? | \/_ |SHIFT|
             // | CTRL| WIN | ALT | DEL | 英数 |SPACE|          |SPACE| かな |      　　　　    | BKS |
 
             bindings = <
-&kp Q           &kp W         &kp E         &kp R       &kp T                                   &kp Y          &kp U  &kp I     &kp O     &kp P
-&kp A           &kp S         &kp D         &kp F       &kp G                       &kp COMMA   &kp H          &kp J  &kp K     &kp L     &kp ENTER
-&kp LEFT_SHIFT  &kp Z         &kp X         &kp C       &kp V          &kp B        &kp PERIOD  &kp N          &kp M  &mkp MB1  &mkp MB2  &kp RIGHT_SHIFT
-&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &lt 2 JP_EISU  &kp SPACE    &kp SPACE   &lt 1 JP_KANA                             &kp BACKSPACE
+&kp Q           &kp W         &kp E         &kp R       &kp T                                   &kp Y          &kp U  &kp I      &kp O        &kp P
+&kp A           &kp S         &kp D         &kp F       &kp G                       &kp COMMA   &kp H          &kp J  &kp K      &kp L        &kp ENTER
+&kp LEFT_SHIFT  &kp Z         &kp X         &kp C       &kp V          &kp B        &kp PERIOD  &kp N          &kp M  &kp SLASH  &kp JP_BSLH  &kp RIGHT_SHIFT
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &lt 2 JP_EISU  &kp SPACE    &kp SPACE   &lt 1 JP_KANA                                 &kp BACKSPACE
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -265,10 +265,10 @@
             // | CTRL| WIN | ALT | DEL | 英数 |SPACE|          |SPACE| かな |      　　　　    |  _  |
 
             bindings = <
-&kp NUMBER_1    &mo2          &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                          &mo6         &mo7   &mo8            &mo9            &mo0
-&none           &none         &none         &none         &none                      &none      &none        &none  &none           &kp UP_ARROW    &none
-&kp LEFT_SHIFT  &none         &none         &none         &none         &none        &none      &none        &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE    &kp JP_EISU   &kp SPACE    &kp SPACE  &kp JP_KANA                                         &kp JP_UNDERSCORE
+&kp NUMBER_1    &mo2          &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                          &mo6         &mo7            &mo8            &mo9             &mo0
+&none           &none         &none         &none         &none                      &none      &none        &none           &none           &kp UP_ARROW     &none
+&kp LEFT_SHIFT  &none         &none         &none         &none         &none        &none      &none        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RIGHT_SHIFT
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE    &kp JP_EISU   &kp SPACE    &kp SPACE  &kp JP_KANA                                                   &kp JP_UNDERSCORE
             >;
 
             sensor-bindings = <&scroll_right_left>;
@@ -312,8 +312,8 @@
         MOUSE {
             bindings = <
 &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans
-&trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans            &trans  &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans
-&trans  &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans    &trans    &trans    &trans            &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans    &mkp MB1  &mkp MB2  &trans
 &trans  &trans    &trans    &trans    &trans  &trans    &trans  &trans                                &trans
             >;
 
