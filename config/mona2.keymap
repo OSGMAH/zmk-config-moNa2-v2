@@ -84,7 +84,7 @@
         };
 
         Layer_5 {
-            bindings = <&mo 5>;
+            bindings = <&to 0>;
             key-positions = <21 22>;
         };
 
