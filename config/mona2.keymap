@@ -83,6 +83,11 @@
             key-positions = <0 1>;
         };
 
+        Layer_5 {
+            bindings = <&mo 5>;
+            key-positions = <20 21>;
+        };
+
         PrtScr {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <0 9>;
