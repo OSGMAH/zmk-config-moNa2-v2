@@ -133,7 +133,7 @@
 
         Layer_6 {
             bindings = <&mo 6>;
-            key-positions = <41 0>;  // SPACE+Q
+            key-positions = <21 22>;  // CTRL+WIN
         };
 
         PrtScr {
