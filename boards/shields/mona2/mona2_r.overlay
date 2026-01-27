@@ -50,9 +50,9 @@
         status = "okay";
         compatible = "pixart,pmw3610";  //トラボセンサ用のドライバとバインド
         reg = <0>;
-        spi-max-frequency = <1000000>;  // 2MHz→1MHzに変更（安定性向上）
+        spi-max-frequency = <2000000>;  // 2MHz（元の設定）
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //P0.02を指定(MOTION)
-        cpi = <800>; //CPI設定
+        cpi = <600>; //CPI設定（元の設定）
         //swap-xy;・
         invert-x; //COROPIT版ではコメントアウトを外す
         invert-y; //COROPIT版ではコメントアウトを外す
