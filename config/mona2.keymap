@@ -140,6 +140,34 @@
             bindings = <&kp PRINTSCREEN>;
             key-positions = <0 9>;
         };
+
+        combo_kakko_kagi {
+            timeout-ms = <50>;
+            key-positions = <7 18>;
+            bindings = <&kakko_kagi>;
+            layers = <0>;
+        };
+
+        combo_kakko_round {
+            timeout-ms = <50>;
+            key-positions = <8 19>;
+            bindings = <&kakko_round>;
+            layers = <0>;
+        };
+
+        combo_kakko_square {
+            timeout-ms = <50>;
+            key-positions = <16 28>;
+            bindings = <&kakko_square>;
+            layers = <0>;
+        };
+
+        combo_kakko_curly {
+            timeout-ms = <50>;
+            key-positions = <17 29>;
+            bindings = <&kakko_curly>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -148,6 +176,69 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+        };
+
+        bt_sel_0: bt_sel_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>, <&bt BT_DISC 1>, <&bt BT_DISC 2>, <&bt BT_DISC 3>, <&bt BT_DISC 4>;
+            label = "BT_SEL_0";
+        };
+
+        bt_sel_1: bt_sel_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1>, <&bt BT_DISC 0>, <&bt BT_DISC 2>, <&bt BT_DISC 3>, <&bt BT_DISC 4>;
+            label = "BT_SEL_1";
+        };
+
+        bt_sel_2: bt_sel_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2>, <&bt BT_DISC 0>, <&bt BT_DISC 1>, <&bt BT_DISC 3>, <&bt BT_DISC 4>;
+            label = "BT_SEL_2";
+        };
+
+        bt_sel_3: bt_sel_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3>, <&bt BT_DISC 0>, <&bt BT_DISC 1>, <&bt BT_DISC 2>, <&bt BT_DISC 4>;
+            label = "BT_SEL_3";
+        };
+
+        bt_sel_4: bt_sel_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4>, <&bt BT_DISC 0>, <&bt BT_DISC 1>, <&bt BT_DISC 2>, <&bt BT_DISC 3>;
+            label = "BT_SEL_4";
+        };
+
+        kakko_kagi: kakko_kagi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LEFT_BRACKET)>, <&kp LS(RIGHT_BRACKET)>, <&kp LEFT_ARROW>;
+            label = "KAKKO_KAGI";
+        };
+
+        kakko_round: kakko_round {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N8)>, <&kp LS(N9)>, <&kp LEFT_ARROW>;
+            label = "KAKKO_ROUND";
+        };
+
+        kakko_square: kakko_square {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>, <&kp LEFT_ARROW>;
+            label = "KAKKO_SQUARE";
+        };
+
+        kakko_curly: kakko_curly {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LEFT_BRACKET)>, <&kp LS(RIGHT_BRACKET)>, <&kp LEFT_ARROW>;
+            label = "KAKKO_CURLY";
         };
     };
 
@@ -407,10 +498,10 @@
 
         SCROLL {
             bindings = <
-&none           &sys_reset    &none         &none       &none                                &none        &none  &none  &bt BT_SEL 3  &bt BT_SEL 0
-&none           &none         &none         &none       &none                     &none      &none        &none  &none  &bt BT_SEL 4  &bt BT_SEL 1
-&kp LEFT_SHIFT  &none         &none         &none       &none        &none        &none      &none        &none  &none  &none         &bt BT_SEL 2
-&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &kp JP_EISU  &kp SPACE    &kp SPACE  &kp JP_KANA                              &bt BT_CLR_ALL
+&none           &sys_reset    &none         &none       &none                                &none        &none  &none  &bt_sel_3  &bt_sel_0
+&none           &none         &none         &none       &none                     &none      &none        &none  &none  &bt_sel_4  &bt_sel_1
+&kp LEFT_SHIFT  &none         &none         &none       &none        &none        &none      &none        &none  &none  &none      &bt_sel_2
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &kp JP_EISU  &kp SPACE    &kp SPACE  &kp JP_KANA                           &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&scroll_right_left>;
