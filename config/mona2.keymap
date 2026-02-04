@@ -435,23 +435,6 @@
 
         layer_1 {
             // -----------------------------------------------------------------------------------
-            // | 1/! | 2/" | 3/# | 4/$ | 5/% |                      | 6/& | 7/' | 8/( | 9/) |  0  |
-            // | non | non | non | non | non |                | non | non | non |  ↑  |     | non |
-            // |SHIFT| non | non | non | non | non |          | non | non |  ←  |  ↓  |  →  |SHIFT|
-            // | CTRL| WIN | ALT | DEL | 英数 |SPACE|          |SPACE| かな |                |  _  |
-
-            bindings = <
-&mo1            &mo2          &mo3          &mo4          &mo5                              &mo6         &mo7            &mo8            &mo9             &mo0
-&none           &none         &none         &none         &none                      &none      &none        &none           &kp UP_ARROW    &none            &none
-&kp LEFT_SHIFT  &none         &none         &none         &none         &none        &none      &none        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RIGHT_SHIFT
-&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE    &kp JP_EISU   &kp SPACE    &kp SPACE  &kp JP_KANA                                                   &kp JP_UNDERSCORE
-            >;
-
-            sensor-bindings = <&scroll_right_left>;
-        };
-
-        layer_2 {
-            // -----------------------------------------------------------------------------------
             // | F1  | F2  | F3  | F4  | F5  |                      | non | non | -/= | ^/~ | ¥/| |
             // | F6  | F7  | F8  | F9  | F10 |                | non | non | non | non | @/` | [/{ |
             // |SHIFT| non | non | non | F11 | F12 |          | non | non | non | ;/+ | :/* | ]/} |
@@ -465,6 +448,23 @@
             >;
 
             sensor-bindings = <&scroll_up_down>;
+        };
+
+        layer_2 {
+            // -----------------------------------------------------------------------------------
+            // | 1/! | 2/" | 3/# | 4/$ | 5/% |                      | 6/& | 7/' | 8/( | 9/) |  0  |
+            // | non | non | non | non | non |                | non | non | non |  ↑  |     | non |
+            // |SHIFT| non | non | non | non | non |          | non | non |  ←  |  ↓  |  →  |SHIFT|
+            // | CTRL| WIN | ALT | DEL | 英数 |SPACE|          |SPACE| かな |                |  _  |
+
+            bindings = <
+&mo1            &mo2          &mo3          &mo4          &mo5                              &mo6         &mo7            &mo8            &mo9             &mo0
+&none           &none         &none         &none         &none                      &none      &none        &none           &kp UP_ARROW    &none            &none
+&kp LEFT_SHIFT  &none         &none         &none         &none         &none        &none      &none        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RIGHT_SHIFT
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE    &kp JP_EISU   &kp SPACE    &kp SPACE  &kp JP_KANA                                                   &kp JP_UNDERSCORE
+            >;
+
+            sensor-bindings = <&scroll_right_left>;
         };
 
         layer_3 {
