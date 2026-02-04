@@ -100,7 +100,7 @@
             key-positions = <3 4>;  // R+T
         };
 
-        Num5_FG {
+        Num5 {
             bindings = <&mo5>;
             key-positions = <13 14>;  // F+G
         };
@@ -126,9 +126,9 @@
             key-positions = <8 9>;  // O+P
         };
 
-        Num0_KL {
+        Num0_L_Enter {
             bindings = <&mo0>;
-            key-positions = <18 19>;  // K+L
+            key-positions = <19 20>;  // L+Enter
         };
 
         Layer_6 {
