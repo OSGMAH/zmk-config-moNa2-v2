@@ -216,7 +216,7 @@
         kakko_kagi: kakko_kagi {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LEFT_BRACKET)>, <&kp LS(RIGHT_BRACKET)>, <&kp LEFT_ARROW>;
+            bindings = <&kp LS(JP_LBRACKET)>, <&kp LS(JP_RBRACKET)>, <&kp LEFT_ARROW>;
             label = "KAKKO_KAGI";
         };
 
@@ -230,14 +230,14 @@
         kakko_square: kakko_square {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>, <&kp LEFT_ARROW>;
+            bindings = <&kp JP_LBRACKET>, <&kp JP_RBRACKET>, <&kp LEFT_ARROW>;
             label = "KAKKO_SQUARE";
         };
 
         kakko_curly: kakko_curly {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LEFT_BRACKET)>, <&kp LS(RIGHT_BRACKET)>, <&kp LEFT_ARROW>;
+            bindings = <&kp JP_LBRACE>, <&kp JP_RBRACE>, <&kp LEFT_ARROW>;
             label = "KAKKO_CURLY";
         };
     };
