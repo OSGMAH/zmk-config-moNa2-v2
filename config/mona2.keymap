@@ -105,6 +105,11 @@
             key-positions = <0 4>;  // Q+T
         };
 
+        Num5_FG {
+            bindings = <&mo5>;
+            key-positions = <13 14>;  // F+G
+        };
+
         // 数字キー（右手）
         Num6 {
             bindings = <&mo6>;
@@ -129,6 +134,11 @@
         Num0 {
             bindings = <&mo0>;
             key-positions = <5 9>;  // Y+P
+        };
+
+        Num0_KL {
+            bindings = <&mo0>;
+            key-positions = <18 19>;  // K+L
         };
 
         Layer_6 {
