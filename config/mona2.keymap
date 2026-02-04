@@ -441,9 +441,9 @@
             // | CTRL| WIN | ALT | DEL | 英数 |SPACE|         |SPACE| かな |                 | BKS |
 
             bindings = <
-&kp F1          &kp F2        &kp F3        &kp F4      &kp F5                               &none        &none  &moA   &moB  &moC
-&kp F6          &kp F7        &kp F8        &kp F9      &kp F10                   &none      &none        &none  &none  &moD  &moE
-&kp LEFT_SHIFT  &none         &none         &none       &kp F11      &kp F12      &none      &none        &none  &moF   &moG  &moH
+&kp F1          &kp F2        &kp F3        &kp F4      &kp F5                               &trans       &trans  &moA   &moB  &moC
+&kp F6          &kp F7        &kp F8        &kp F9      &kp F10                   &trans     &trans       &trans  &trans  &moD  &moE
+&kp LEFT_SHIFT  &trans        &trans        &trans      &kp F11      &kp F12      &trans     &trans       &trans  &moF   &moG  &moH
 &kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &kp JP_EISU  &kp SPACE    &kp SPACE  &kp JP_KANA                      &kp JP_UNDERSCORE
             >;
 
@@ -459,8 +459,8 @@
 
             bindings = <
 &mo1            &mo2          &mo3          &mo4          &mo5                              &mo6         &mo7            &mo8            &mo9             &mo0
-&none           &none         &none         &none         &none                      &none      &none        &none           &kp UP_ARROW    &none            &none
-&kp LEFT_SHIFT  &none         &none         &none         &none         &none        &none      &none        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RIGHT_SHIFT
+&trans          &trans        &trans        &trans        &trans                     &trans     &trans       &trans          &kp UP_ARROW    &trans           &trans
+&kp LEFT_SHIFT  &trans        &trans        &trans        &trans        &trans       &trans     &trans       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RIGHT_SHIFT
 &kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE    &kp JP_EISU   &kp SPACE    &kp SPACE  &kp JP_KANA                                                   &kp JP_UNDERSCORE
             >;
 
@@ -498,9 +498,9 @@
 
         SCROLL {
             bindings = <
-&none           &sys_reset    &none         &none       &none                                &none        &none  &none  &bt_sel_3  &bt_sel_0
-&none           &none         &none         &none       &none                     &none      &none        &none  &none  &bt_sel_4  &bt_sel_1
-&kp LEFT_SHIFT  &none         &none         &none       &none        &none        &none      &none        &none  &none  &none      &bt_sel_2
+&trans          &sys_reset    &trans        &trans      &trans                               &trans       &trans  &trans  &bt_sel_3  &bt_sel_0
+&trans          &trans        &trans        &trans      &trans                    &trans     &trans       &trans  &trans  &bt_sel_4  &bt_sel_1
+&kp LEFT_SHIFT  &trans        &trans        &trans      &trans       &trans       &trans     &trans       &trans  &trans  &trans     &bt_sel_2
 &kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &kp JP_EISU  &kp SPACE    &kp SPACE  &kp JP_KANA                           &bt BT_CLR_ALL
             >;
 
