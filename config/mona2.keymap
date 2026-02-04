@@ -100,11 +100,6 @@
             key-positions = <3 4>;  // R+T
         };
 
-        Num5 {
-            bindings = <&mo5>;
-            key-positions = <0 4>;  // Q+T
-        };
-
         Num5_FG {
             bindings = <&mo5>;
             key-positions = <13 14>;  // F+G
@@ -129,11 +124,6 @@
         Num9 {
             bindings = <&mo9>;
             key-positions = <8 9>;  // O+P
-        };
-
-        Num0 {
-            bindings = <&mo0>;
-            key-positions = <5 9>;  // Y+P
         };
 
         Num0_KL {
