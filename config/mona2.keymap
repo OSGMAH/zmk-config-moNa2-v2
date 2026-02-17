@@ -59,6 +59,7 @@
         };
 
         // 矢印キー
+
         Up {
             bindings = <&kp UP_ARROW>;
             key-positions = <18 19>;  // K+L
@@ -80,6 +81,7 @@
         };
 
         // 数字キー（左手）
+
         Num1 {
             bindings = <&mo1>;
             key-positions = <0 1>;  // Q+W
@@ -106,6 +108,7 @@
         };
 
         // 数字キー（右手）
+
         Num6 {
             bindings = <&mo6>;
             key-positions = <5 6>;  // Y+U
@@ -181,63 +184,63 @@
         bt_sel_0: bt_sel_0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0>, <&bt BT_DISC 1>, <&bt BT_DISC 2>, <&bt BT_DISC 3>, <&bt BT_DISC 4>;
+            bindings = <&bt BT_SEL 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4>;
             label = "BT_SEL_0";
         };
 
         bt_sel_1: bt_sel_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1>, <&bt BT_DISC 0>, <&bt BT_DISC 2>, <&bt BT_DISC 3>, <&bt BT_DISC 4>;
+            bindings = <&bt BT_SEL 1 &bt BT_DISC 0 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4>;
             label = "BT_SEL_1";
         };
 
         bt_sel_2: bt_sel_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2>, <&bt BT_DISC 0>, <&bt BT_DISC 1>, <&bt BT_DISC 3>, <&bt BT_DISC 4>;
+            bindings = <&bt BT_SEL 2 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 3 &bt BT_DISC 4>;
             label = "BT_SEL_2";
         };
 
         bt_sel_3: bt_sel_3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3>, <&bt BT_DISC 0>, <&bt BT_DISC 1>, <&bt BT_DISC 2>, <&bt BT_DISC 4>;
+            bindings = <&bt BT_SEL 3 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 4>;
             label = "BT_SEL_3";
         };
 
         bt_sel_4: bt_sel_4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 4>, <&bt BT_DISC 0>, <&bt BT_DISC 1>, <&bt BT_DISC 2>, <&bt BT_DISC 3>;
+            bindings = <&bt BT_SEL 4 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3>;
             label = "BT_SEL_4";
         };
 
         kakko_kagi: kakko_kagi {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(JP_LBRACKET)>, <&kp LS(JP_RBRACKET)>, <&kp LEFT_ARROW>;
+            bindings = <&kp LS(JP_LBRACKET) &kp LS(JP_RBRACKET) &kp LEFT_ARROW>;
             label = "KAKKO_KAGI";
         };
 
         kakko_round: kakko_round {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(N8)>, <&kp LS(N9)>, <&kp LEFT_ARROW>;
+            bindings = <&kp LS(N8) &kp LS(N9) &kp LEFT_ARROW>;
             label = "KAKKO_ROUND";
         };
 
         kakko_square: kakko_square {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp JP_LBRACKET>, <&kp JP_RBRACKET>, <&kp LEFT_ARROW>;
+            bindings = <&kp JP_LBRACKET &kp JP_RBRACKET &kp LEFT_ARROW>;
             label = "KAKKO_SQUARE";
         };
 
         kakko_curly: kakko_curly {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp JP_LBRACE>, <&kp JP_RBRACE>, <&kp LEFT_ARROW>;
+            bindings = <&kp JP_LBRACE &kp JP_RBRACE &kp LEFT_ARROW>;
             label = "KAKKO_CURLY";
         };
     };
@@ -434,10 +437,10 @@
             // | CTRL| WIN | ALT | DEL |英数L2|SPACE|          |SPACE|かなL1|                | BKS |
 
             bindings = <
-&kp Q             &kp W         &kp E         &kp R       &kp T                                   &kp Y          &kp U  &kp I      &kp O        &kp P
-&ctrl_a LCTRL A   &kp S         &kp D         &kp F       &kp G                       &kp COMMA   &kp H          &kp J  &kp K      &kp L        &kp ENTER
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V       &kp B          &kp SLASH    &kp PERIOD  &kp N          &kp M  &mkp MB1   &mkp MB2     &kp RIGHT_SHIFT
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &lt 2 JP_EISU  &kp SPACE    &kp SPACE   &lt 1 JP_KANA                                 &kp BACKSPACE
+&kp Q             &kp W         &kp E         &kp R       &kp T                                   &kp Y          &kp U  &kp I     &kp O     &kp P
+&ctrl_a LCTRL A   &kp S         &kp D         &kp F       &kp G                       &kp COMMA   &kp H          &kp J  &kp K     &kp L     &kp ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V       &kp B          &kp SLASH    &kp PERIOD  &kp N          &kp M  &mkp MB1  &mkp MB2  &kp RIGHT_SHIFT
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &lt 2 JP_EISU  &kp SPACE    &kp SPACE   &lt 1 JP_KANA                             &kp BACKSPACE
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -451,10 +454,10 @@
             // | CTRL| WIN | ALT | DEL | 英数 |SPACE|          |SPACE| かな |                |  _  |
 
             bindings = <
-&kp F1          &kp F2        &kp F3        &kp F4      &kp F5                               &trans       &trans  &moA   &moB  &moC
+&kp F1          &kp F2        &kp F3        &kp F4      &kp F5                               &trans       &trans  &moA    &moB  &moC
 &kp F6          &kp F7        &kp F8        &kp F9      &kp F10                   &trans     &trans       &trans  &trans  &moD  &moE
-&kp LEFT_SHIFT  &trans        &trans        &trans      &kp F11      &kp F12      &trans     &trans       &trans  &moF   &moG  &moH
-&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &kp JP_EISU  &kp SPACE    &kp SPACE  &kp JP_KANA                      &kp JP_UNDERSCORE
+&kp LEFT_SHIFT  &trans        &trans        &trans      &kp F11      &kp F12      &trans     &trans       &trans  &moF    &moG  &moH
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &kp JP_EISU  &kp SPACE    &kp SPACE  &kp JP_KANA                        &kp JP_UNDERSCORE
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -468,10 +471,10 @@
             // | CTRL| WIN | ALT | DEL | 英数 |SPACE|          |SPACE| かな |                |  _  |
 
             bindings = <
-&mo1            &mo2          &mo3          &mo4          &mo5                              &mo6         &mo7            &mo8            &mo9             &mo0
-&trans          &trans        &trans        &trans        &trans                     &trans     &trans       &trans          &kp UP_ARROW    &trans           &trans
-&kp LEFT_SHIFT  &trans        &trans        &trans        &trans        &trans       &trans     &trans       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RIGHT_SHIFT
-&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE    &kp JP_EISU   &kp SPACE    &kp SPACE  &kp JP_KANA                                                   &kp JP_UNDERSCORE
+&mo1            &mo2          &mo3          &mo4        &mo5                                 &mo6         &mo7            &mo8            &mo9             &mo0
+&trans          &trans        &trans        &trans      &trans                    &trans     &trans       &trans          &kp UP_ARROW    &trans           &trans
+&kp LEFT_SHIFT  &trans        &trans        &trans      &trans       &trans       &trans     &trans       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RIGHT_SHIFT
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &kp JP_EISU  &kp SPACE    &kp SPACE  &kp JP_KANA                                                   &kp JP_UNDERSCORE
             >;
 
             sensor-bindings = <&scroll_right_left>;
@@ -515,10 +518,10 @@
             // |trans|trans|trans|trans|trans|trans|          |trans|trans|                |trans|
 
             bindings = <
-&trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans
-&trans  &trans    &trans    &trans    &trans            &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans    &mkp MB1  &mkp MB2  &trans
-&trans  &trans    &trans    &trans    &trans  &trans    &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &mkp MB1  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                              &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -532,10 +535,10 @@
             // | CTRL| WIN | ALT | DEL | 英数 |SPACE|          |SPACE| かな |                |BTCLR|
 
             bindings = <
-&trans          &sys_reset    &trans        &trans      &trans                               &trans       &trans  &trans  &bt_sel_3  &bt_sel_0
+&trans          &trans        &trans        &trans      &trans                               &trans       &trans  &trans  &bt_sel_3  &bt_sel_0
 &trans          &trans        &trans        &trans      &trans                    &trans     &trans       &trans  &trans  &bt_sel_4  &bt_sel_1
 &kp LEFT_SHIFT  &trans        &trans        &trans      &trans       &trans       &trans     &trans       &trans  &trans  &trans     &bt_sel_2
-&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &kp JP_EISU  &kp SPACE    &kp SPACE  &kp JP_KANA                           &bt BT_CLR_ALL
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp DELETE  &kp JP_EISU  &kp SPACE    &kp SPACE  &kp JP_KANA                             &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&scroll_right_left>;
